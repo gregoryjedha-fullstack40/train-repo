@@ -1,4 +1,4 @@
-# 🔁 Train & Monitor — IBM Attrition
+# Train & Monitor — IBM Attrition
 
 Repo de **(ré)entraînement** et de **monitoring de dérive** du modèle d'attrition,
 complémentaire de [`demo-MLops`](https://github.com/semarmehdi/demo-MLops) (qui
@@ -60,7 +60,7 @@ train-repo/
 
 ---
 
-## 🏋️ `train.py` — ce qu'il fait
+## `train.py` — ce qu'il fait
 
 - **Split stratifié** 80/20 (l'attrition est déséquilibrée, ~16 % de départs).
 - **Gestion du déséquilibre** : `class_weight="balanced"`.
@@ -104,7 +104,7 @@ et **Models** (nouvelle version `ibm_attrition_detector` avec l'alias `challenge
 
 ---
 
-## 📉 Monitoring — `run_monitoring.py` + `build_current.py`
+## Monitoring — `run_monitoring.py` + `build_current.py`
 
 - `build_current.py` agrège les CSV de prédiction S3 sur une **fenêtre glissante**
   (défaut 24 h) et **aligne le schéma** sur les features de référence (retire la
@@ -130,7 +130,7 @@ et **Models** (nouvelle version `ibm_attrition_detector` avec l'alias `challenge
 
 ---
 
-## ⚙️ Workflows GitHub Actions
+## Workflows GitHub Actions
 
 ### `train.yaml`
 Se déclenche en **manuel** (`workflow_dispatch`, avec hyperparamètres et alias),
@@ -153,7 +153,7 @@ Si la dérive dépasse le seuil, il lance `gh workflow run train.yaml`.
 
 ---
 
-## 🔐 Secrets & Variables GitHub
+## Secrets & Variables GitHub
 
 **Repo → Settings → Secrets and variables → Actions** (niveau *Repository*).
 
@@ -171,7 +171,7 @@ Si la dérive dépasse le seuil, il lance `gh workflow run train.yaml`.
 
 ---
 
-## ⏭️ Promotion en production & évolution
+## Promotion en production & évolution
 
 L'entraînement s'arrête volontairement à l'alias `challenger`. La **promotion en
 `@production`** (que sert l'API modèle) reste **manuelle** : déplacement de l'alias
@@ -191,7 +191,7 @@ l'oral.
 
 ---
 
-## ⚡ TL;DR
+## TL;DR
 
 ```bash
 # Entraîner et enregistrer un challenger
