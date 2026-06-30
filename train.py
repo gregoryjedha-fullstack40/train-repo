@@ -83,10 +83,9 @@ if __name__ == "__main__":
     )
 
     # Pipeline
-    # n_estimators = int(args.n_estimators)
-    # min_samples_split = int(args.min_samples_split)
-    n_estimators = 150
-    min_samples_split = 8
+    n_estimators = int(os.getenv("N_ESTIMATORS", "150"))
+    min_samples_split = int(os.getenv("MIN_SAMPLES_SPLIT", "8"))
+    alias_name = os.getenv("REGISTER_ALIAS", "challenger")
 
     model = Pipeline(
         steps=[

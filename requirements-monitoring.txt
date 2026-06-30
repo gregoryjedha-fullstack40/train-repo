@@ -1,0 +1,5 @@
+evidently==0.7.17
+pandas>=2.0
+numpy>=1.26
+boto3
+openpyxl
