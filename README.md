@@ -133,7 +133,7 @@ Deux points gérés explicitement :
 
 ---
 
-## Promotion en production et évolution
+## Promotion en production et évolution +
 
 L'entraînement s'arrête volontairement à l'alias `challenger`. La promotion en
 `@production` (que sert l'API modèle de `bloc4_mlops`) reste **manuelle** (déplacement
